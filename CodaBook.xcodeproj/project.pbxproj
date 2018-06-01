@@ -13,6 +13,10 @@
 		D01BC1D520C002DF00C23C14 /* LayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1D420C002DF00C23C14 /* LayerExtension.swift */; };
 		D01BC1D720C0073C00C23C14 /* Alerte.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1D620C0073C00C23C14 /* Alerte.swift */; };
 		D01BC1DA20C00B9900C23C14 /* FirebaseErreur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1D920C00B9900C23C14 /* FirebaseErreur.swift */; };
+		D01BC1DC20C1748600C23C14 /* Refs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1DB20C1748600C23C14 /* Refs.swift */; };
+		D01BC1DE20C17D3500C23C14 /* ProfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1DD20C17D3500C23C14 /* ProfilController.swift */; };
+		D01BC1E020C17D5800C23C14 /* FilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1DF20C17D5800C23C14 /* FilController.swift */; };
+		D01BC1E220C17DDD00C23C14 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1E120C17DDD00C23C14 /* TabBar.swift */; };
 		D02AB1AB20BFEFDF00F51D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AB1AA20BFEFDF00F51D8A /* AppDelegate.swift */; };
 		D02AB1B020BFEFDF00F51D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02AB1AE20BFEFDF00F51D8A /* Main.storyboard */; };
 		D02AB1B220BFEFE100F51D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02AB1B120BFEFE100F51D8A /* Assets.xcassets */; };
@@ -31,6 +35,10 @@
 		D01BC1D420C002DF00C23C14 /* LayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerExtension.swift; sourceTree = "<group>"; };
 		D01BC1D620C0073C00C23C14 /* Alerte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerte.swift; sourceTree = "<group>"; };
 		D01BC1D920C00B9900C23C14 /* FirebaseErreur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseErreur.swift; sourceTree = "<group>"; };
+		D01BC1DB20C1748600C23C14 /* Refs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refs.swift; sourceTree = "<group>"; };
+		D01BC1DD20C17D3500C23C14 /* ProfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilController.swift; sourceTree = "<group>"; };
+		D01BC1DF20C17D5800C23C14 /* FilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilController.swift; sourceTree = "<group>"; };
+		D01BC1E120C17DDD00C23C14 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D02AB1A720BFEFDF00F51D8A /* CodaBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodaBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02AB1AA20BFEFDF00F51D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D02AB1AF20BFEFDF00F51D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				D01BC1D920C00B9900C23C14 /* FirebaseErreur.swift */,
+				D01BC1DB20C1748600C23C14 /* Refs.swift */,
 			);
 			path = MonFirebase;
 			sourceTree = "<group>";
@@ -141,6 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				D01BC1CD20BFFFEC00C23C14 /* ConnexionController.swift */,
+				D01BC1DD20C17D3500C23C14 /* ProfilController.swift */,
+				D01BC1DF20C17D5800C23C14 /* FilController.swift */,
+				D01BC1E120C17DDD00C23C14 /* TabBar.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,10 +296,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01BC1DA20C00B9900C23C14 /* FirebaseErreur.swift in Sources */,
+				D01BC1DE20C17D3500C23C14 /* ProfilController.swift in Sources */,
 				D02AB1AB20BFEFDF00F51D8A /* AppDelegate.swift in Sources */,
+				D01BC1E020C17D5800C23C14 /* FilController.swift in Sources */,
 				D01BC1D320C0025E00C23C14 /* Constantes.swift in Sources */,
 				D01BC1CE20BFFFEC00C23C14 /* ConnexionController.swift in Sources */,
 				D01BC1D020C001ED00C23C14 /* BoutonCodabook.swift in Sources */,
+				D01BC1DC20C1748600C23C14 /* Refs.swift in Sources */,
+				D01BC1E220C17DDD00C23C14 /* TabBar.swift in Sources */,
 				D01BC1D720C0073C00C23C14 /* Alerte.swift in Sources */,
 				D01BC1D520C002DF00C23C14 /* LayerExtension.swift in Sources */,
 			);
