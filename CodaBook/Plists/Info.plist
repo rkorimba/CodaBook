@@ -32,12 +32,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Accès à la librairie</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Accès à l&apos;appareil photo</string>
 </dict>
 </plist>

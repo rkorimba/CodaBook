@@ -10,17 +10,43 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class ProfilController: UIViewController {
+class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var photoDeProfil: ImageRonde!
     @IBOutlet weak var prenomLabel: UILabel!
     @IBOutlet weak var nomLabel: UILabel!
     
     var profil: Utilisateur?
+    var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         obtenirProfil()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        photoDeProfil.isUserInteractionEnabled = true
+        photoDeProfil.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(prendrePhoto)))
+    }
+    
+    @objc func prendrePhoto() {
+        
+        Alerte.montrer.photo(imagePicker: imagePicker, controller: self)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var image: UIImage?
+        if let editee = info[UIImagePickerControllerEditedImage] as? UIImage {
+            image = editee
+        } else if let originale = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            image = originale
+        }
+        guard image != nil, let data = UIImageJPEGRepresentation(image!, 0.2) else { return }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        picker.dismiss(animated: true, completion: nil)
     }
     
     func obtenirProfil() {

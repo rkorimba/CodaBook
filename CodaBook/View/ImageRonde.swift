@@ -25,7 +25,7 @@ class ImageRonde: UIImageView {
         clipsToBounds = true
         contentMode = .scaleAspectFill
         layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 2
+        layer.borderWidth = 2   
     }
     
 }
