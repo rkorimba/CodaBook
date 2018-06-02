@@ -25,7 +25,7 @@ class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINav
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         photoDeProfil.isUserInteractionEnabled = true
-        photoDeProfil.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(prendrePhoto)))
+        photoDeProfil.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(prendrePhoto)))
     }
     
     @objc func prendrePhoto() {
@@ -41,7 +41,18 @@ class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINav
         } else if let originale = info[UIImagePickerControllerOriginalImage] as? UIImage {
             image = originale
         }
+        picker.dismiss(animated: true, completion: nil)
         guard image != nil, let data = UIImageJPEGRepresentation(image!, 0.2) else { return }
+        guard let id = Auth.auth().currentUser?.uid else { return }
+        let ref = Refs.obtenir.basePhotosDeProfil.child(id)
+        ref.putData(data, metadata: nil) { (metadata, error) in
+            ref.downloadURL(completion: { (url, error) in
+                if let urlString = url?.absoluteString {
+                    let userRef = Refs.obtenir.baseUtilisateur.child(id)
+                    userRef.updateChildValues([IMAGE_URL: urlString])
+                }
+            })
+        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
