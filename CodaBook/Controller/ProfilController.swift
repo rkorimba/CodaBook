@@ -45,6 +45,17 @@ class ProfilController: UIViewController {
     }
     
     @IBAction func modifierProfilAction(_ sender: Any) {
+        
+        if let bouton = sender as? UIButton {
+            var array = [String]()
+            switch bouton.tag {
+            case 0: array.append(PRENOM)
+            case 1: array.append(NOM)
+            default: break
+            }
+            guard array.count == 1 else { return }
+            Alerte.montrer.alerteTF(titre: MODIFIER, message: array[0], array: array, controller: self, completion: nil)
+        }
     }
     
     @IBAction func decoAction(_ sender: Any) {
