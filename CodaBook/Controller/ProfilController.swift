@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class ProfilController: UIViewController {
 
-    @IBOutlet weak var photoDeProfil: UIImageView!
+    @IBOutlet weak var photoDeProfil: ImageRonde!
     @IBOutlet weak var prenomLabel: UILabel!
     @IBOutlet weak var nomLabel: UILabel!
     
@@ -42,6 +42,7 @@ class ProfilController: UIViewController {
         guard profil != nil else { return }
         prenomLabel.text = "Prénom: " + self.profil!.prenom
         nomLabel.text = "Nom: " + self.profil!.nom
+        photoDeProfil.telecharger(self.profil!.imageUrl)
     }
     
     @IBAction func modifierProfilAction(_ sender: Any) {
