@@ -25,6 +25,8 @@
 		D071405820C2906800BACEBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D071405720C2906800BACEBF /* GoogleService-Info.plist */; };
 		D0F43C8020C29CEC006E3C4F /* ImageRonde.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C7F20C29CEC006E3C4F /* ImageRonde.swift */; };
 		D0F43C8220C29DB9006E3C4F /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C8120C29DB9006E3C4F /* ExtensionUIImageView.swift */; };
+		D0F43C8420C2A747006E3C4F /* VueCodaBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C8320C2A747006E3C4F /* VueCodaBook.swift */; };
+		D0F43C8620C2A8D1006E3C4F /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C8520C2A8D1006E3C4F /* PostController.swift */; };
 		D44A53FED1300C4382B57A6B /* Pods_CodaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A622077871D46876E3DC8C /* Pods_CodaBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		D071405720C2906800BACEBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0F43C7F20C29CEC006E3C4F /* ImageRonde.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRonde.swift; sourceTree = "<group>"; };
 		D0F43C8120C29DB9006E3C4F /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
+		D0F43C8320C2A747006E3C4F /* VueCodaBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueCodaBook.swift; sourceTree = "<group>"; };
+		D0F43C8520C2A8D1006E3C4F /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 				D01BC1DD20C17D3500C23C14 /* ProfilController.swift */,
 				D01BC1DF20C17D5800C23C14 /* FilController.swift */,
 				D01BC1E120C17DDD00C23C14 /* TabBar.swift */,
+				D0F43C8520C2A8D1006E3C4F /* PostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				D01BC1D420C002DF00C23C14 /* LayerExtension.swift */,
 				D0F43C7F20C29CEC006E3C4F /* ImageRonde.swift */,
 				D0F43C8120C29DB9006E3C4F /* ExtensionUIImageView.swift */,
+				D0F43C8320C2A747006E3C4F /* VueCodaBook.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01BC1DA20C00B9900C23C14 /* FirebaseErreur.swift in Sources */,
+				D0F43C8420C2A747006E3C4F /* VueCodaBook.swift in Sources */,
 				D01BC1DE20C17D3500C23C14 /* ProfilController.swift in Sources */,
 				D0F43C8220C29DB9006E3C4F /* ExtensionUIImageView.swift in Sources */,
 				D02AB1AB20BFEFDF00F51D8A /* AppDelegate.swift in Sources */,
@@ -312,6 +319,7 @@
 				D01BC1D320C0025E00C23C14 /* Constantes.swift in Sources */,
 				D0F43C8020C29CEC006E3C4F /* ImageRonde.swift in Sources */,
 				D01BC1CE20BFFFEC00C23C14 /* ConnexionController.swift in Sources */,
+				D0F43C8620C2A8D1006E3C4F /* PostController.swift in Sources */,
 				D01BC1D020C001ED00C23C14 /* BoutonCodabook.swift in Sources */,
 				D017E56C20C18F7000B4AE49 /* Utilisateur.swift in Sources */,
 				D01BC1DC20C1748600C23C14 /* Refs.swift in Sources */,
