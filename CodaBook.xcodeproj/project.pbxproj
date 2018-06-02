@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D017E56C20C18F7000B4AE49 /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017E56B20C18F7000B4AE49 /* Utilisateur.swift */; };
 		D01BC1CE20BFFFEC00C23C14 /* ConnexionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1CD20BFFFEC00C23C14 /* ConnexionController.swift */; };
 		D01BC1D020C001ED00C23C14 /* BoutonCodabook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1CF20C001ED00C23C14 /* BoutonCodabook.swift */; };
 		D01BC1D320C0025E00C23C14 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01BC1D220C0025E00C23C14 /* Constantes.swift */; };
@@ -21,7 +22,7 @@
 		D02AB1B020BFEFDF00F51D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02AB1AE20BFEFDF00F51D8A /* Main.storyboard */; };
 		D02AB1B220BFEFE100F51D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02AB1B120BFEFE100F51D8A /* Assets.xcassets */; };
 		D02AB1B520BFEFE100F51D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02AB1B320BFEFE100F51D8A /* LaunchScreen.storyboard */; };
-		D02AB1C220BFFCEA00F51D8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D02AB1C120BFFCEA00F51D8A /* GoogleService-Info.plist */; };
+		D071405820C2906800BACEBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D071405720C2906800BACEBF /* GoogleService-Info.plist */; };
 		D44A53FED1300C4382B57A6B /* Pods_CodaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A622077871D46876E3DC8C /* Pods_CodaBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		11A622077871D46876E3DC8C /* Pods_CodaBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodaBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D70FE0A2F8ED6DC4B403AC /* Pods-CodaBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodaBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodaBook/Pods-CodaBook.debug.xcconfig"; sourceTree = "<group>"; };
 		CF27CC3823AECE1EFE361769 /* Pods-CodaBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodaBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodaBook/Pods-CodaBook.release.xcconfig"; sourceTree = "<group>"; };
+		D017E56B20C18F7000B4AE49 /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		D01BC1CD20BFFFEC00C23C14 /* ConnexionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionController.swift; sourceTree = "<group>"; };
 		D01BC1CF20C001ED00C23C14 /* BoutonCodabook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoutonCodabook.swift; sourceTree = "<group>"; };
 		D01BC1D220C0025E00C23C14 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
@@ -45,7 +47,7 @@
 		D02AB1B120BFEFE100F51D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02AB1B420BFEFE100F51D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02AB1B620BFEFE100F51D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D02AB1C120BFFCEA00F51D8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D071405720C2906800BACEBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D02AB1B620BFEFE100F51D8A /* Info.plist */,
-				D02AB1C120BFFCEA00F51D8A /* GoogleService-Info.plist */,
+				D071405720C2906800BACEBF /* GoogleService-Info.plist */,
 			);
 			path = Plists;
 			sourceTree = "<group>";
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				D01BC1D620C0073C00C23C14 /* Alerte.swift */,
+				D017E56B20C18F7000B4AE49 /* Utilisateur.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D02AB1B520BFEFE100F51D8A /* LaunchScreen.storyboard in Resources */,
-				D02AB1C220BFFCEA00F51D8A /* GoogleService-Info.plist in Resources */,
+				D071405820C2906800BACEBF /* GoogleService-Info.plist in Resources */,
 				D02AB1B220BFEFE100F51D8A /* Assets.xcassets in Resources */,
 				D02AB1B020BFEFDF00F51D8A /* Main.storyboard in Resources */,
 			);
@@ -302,6 +305,7 @@
 				D01BC1D320C0025E00C23C14 /* Constantes.swift in Sources */,
 				D01BC1CE20BFFFEC00C23C14 /* ConnexionController.swift in Sources */,
 				D01BC1D020C001ED00C23C14 /* BoutonCodabook.swift in Sources */,
+				D017E56C20C18F7000B4AE49 /* Utilisateur.swift in Sources */,
 				D01BC1DC20C1748600C23C14 /* Refs.swift in Sources */,
 				D01BC1E220C17DDD00C23C14 /* TabBar.swift in Sources */,
 				D01BC1D720C0073C00C23C14 /* Alerte.swift in Sources */,

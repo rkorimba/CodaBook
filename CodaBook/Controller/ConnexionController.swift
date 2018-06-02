@@ -98,7 +98,7 @@ class ConnexionController: UIViewController {
         self.view.endEditing(true)
         if let adresse = mailTF.text, adresse != "" {
             if let mdp = mdpTF.text, mdp != "" {
-                Auth.auth().signIn(withEmail: adresse, password: mdp, completion: completion(_: _:))
+                Auth.auth().signIn(withEmail: adresse, password: mdp, completion: completion(_:_:))
             } else {
                 Alerte.montrer.erreur(message: MDP_VIDE, controller: self)
             }

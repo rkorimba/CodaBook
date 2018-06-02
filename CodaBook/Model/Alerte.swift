@@ -53,4 +53,20 @@ class Alerte {
         alerte.addAction(UIAlertAction(title: ANNULER, style: .cancel, handler: nil))
         controller.present(alerte, animated: true, completion: nil)
     }
+    
+    func deco(controller: UIViewController) {
+        let alerte = UIAlertController(title: DECO, message: DECO_MESSAGE, preferredStyle: .alert)
+        alerte.addAction(UIAlertAction(title: ANNULER, style: .cancel, handler: nil))
+        let ok = UIAlertAction(title: OK, style: .default) { (action) in
+            do {
+                try Auth.auth().signOut()
+                controller.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        alerte.addAction(ok)
+        controller.present(alerte, animated: true, completion: nil)
+    }
+    
 }
