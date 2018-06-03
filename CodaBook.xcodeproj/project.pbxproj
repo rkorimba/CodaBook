@@ -28,6 +28,7 @@
 		D0F43C8420C2A747006E3C4F /* VueCodaBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C8320C2A747006E3C4F /* VueCodaBook.swift */; };
 		D0F43C8620C2A8D1006E3C4F /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C8520C2A8D1006E3C4F /* PostController.swift */; };
 		D0F43C8820C3E4EA006E3C4F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C8720C3E4EA006E3C4F /* Post.swift */; };
+		D0F43C8A20C3E85C006E3C4F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F43C8920C3E85C006E3C4F /* PostCell.swift */; };
 		D44A53FED1300C4382B57A6B /* Pods_CodaBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A622077871D46876E3DC8C /* Pods_CodaBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		D0F43C8320C2A747006E3C4F /* VueCodaBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VueCodaBook.swift; sourceTree = "<group>"; };
 		D0F43C8520C2A8D1006E3C4F /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		D0F43C8720C3E4EA006E3C4F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D0F43C8920C3E85C006E3C4F /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				D0F43C7F20C29CEC006E3C4F /* ImageRonde.swift */,
 				D0F43C8120C29DB9006E3C4F /* ExtensionUIImageView.swift */,
 				D0F43C8320C2A747006E3C4F /* VueCodaBook.swift */,
+				D0F43C8920C3E85C006E3C4F /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				D01BC1DE20C17D3500C23C14 /* ProfilController.swift in Sources */,
 				D0F43C8220C29DB9006E3C4F /* ExtensionUIImageView.swift in Sources */,
 				D0F43C8820C3E4EA006E3C4F /* Post.swift in Sources */,
+				D0F43C8A20C3E85C006E3C4F /* PostCell.swift in Sources */,
 				D02AB1AB20BFEFDF00F51D8A /* AppDelegate.swift in Sources */,
 				D01BC1E020C17D5800C23C14 /* FilController.swift in Sources */,
 				D01BC1D320C0025E00C23C14 /* Constantes.swift in Sources */,
