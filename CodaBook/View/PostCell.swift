@@ -32,6 +32,18 @@ class PostCell: UITableViewCell {
         } else {
             imageDuPost.isHidden = false
         }
+        let date = Date(timeIntervalSince1970: self.post.date)
+        let formatteur = DateFormatter()
+        let calendrier = Calendar.current
+        if calendrier.isDateInToday(date) {
+            formatteur.dateStyle = .none
+            formatteur.timeStyle = .short
+        } else {
+            formatteur.dateStyle = .short
+            formatteur.timeStyle = .none
+        }
+        let dateString = formatteur.string(from: date)
+        dateLabel.text = dateString
     }
     
     @IBAction func likeAppuye(_ sender: Any) {
