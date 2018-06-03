@@ -67,7 +67,7 @@ class ProfilController: UIViewController, UIImagePickerControllerDelegate, UINav
         ref.observe(.value) { (snapshot) in
             print(snapshot)
             if let dict = snapshot.value as? [String:String], let prenom = dict[PRENOM], let nom = dict[NOM] {
-                let nouvelUtilisateur = Utilisateur(prenom: prenom, nom: nom, imageUrl: dict[IMAGE_URL])
+                let nouvelUtilisateur = Utilisateur(id: snapshot.key, prenom: prenom, nom: nom, imageUrl: dict[IMAGE_URL])
                 self.profil = nouvelUtilisateur
                 self.miseAJourDonnees()
             }
