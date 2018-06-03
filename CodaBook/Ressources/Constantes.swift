@@ -34,4 +34,4 @@ let TEXTE_VIDE = "Ecrivez quelque chose ..."
 let TEXTE = "texte"
 let USER_ID = "userId"
 let DATE_POST = "date"
-
+let POST = "post"
