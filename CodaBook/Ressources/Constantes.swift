@@ -35,3 +35,6 @@ let TEXTE = "texte"
 let USER_ID = "userId"
 let DATE_POST = "date"
 let POST = "post"
+let CELL_ID = "PostCell"
+
+
