@@ -43,6 +43,7 @@ class PostController: UIViewController, UITextViewDelegate, UIImagePickerControl
         } else if let originale = info[UIImagePickerControllerOriginalImage] as? UIImage {
             photoDuPost.image = originale
         }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -78,13 +79,12 @@ class PostController: UIViewController, UITextViewDelegate, UIImagePickerControl
             ]
             if let image = photoDuPost.image, let data = UIImageJPEGRepresentation(image, 0.3) {
                 let unique = UUID().uuidString
-                let ref = Refs.obtenir.basePhotoDuPost.child(unique)
+                let ref = Refs.obtenir.basePhotoDuPost.child(id).child(unique)
                 ref.putData(data, metadata: nil, completion: { (metadata, error) in
                     if error == nil {
                         ref.downloadURL(completion: { (url, error) in
                             if let urlString = url?.absoluteString {
-                                let userRef = Refs.obtenir.baseUtilisateur.child(id)
-                                userRef.updateChildValues([IMAGE_URL: urlString])
+                                dict[IMAGE_URL] = urlString as AnyObject
                                 self.envoyerPostSurFirebase(dict: dict)
                             }
                         })
