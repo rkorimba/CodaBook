@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class PostCell: UITableViewCell {
 
@@ -32,6 +34,7 @@ class PostCell: UITableViewCell {
         } else {
             imageDuPost.isHidden = false
         }
+        
         let date = Date(timeIntervalSince1970: self.post.date)
         let formatteur = DateFormatter()
         let calendrier = Calendar.current
@@ -44,9 +47,63 @@ class PostCell: UITableViewCell {
         }
         let dateString = formatteur.string(from: date)
         dateLabel.text = dateString
+        
+        if let id = Auth.auth().currentUser?.uid {
+            if self.post.likes.contains(id) {
+                boutonLike.setImage(#imageLiteral(resourceName: "like_plein"), for: .normal)
+            } else {
+                boutonLike.setImage(#imageLiteral(resourceName: "like_vide"), for: .normal)
+            }
+        } else {
+            boutonLike.setImage(#imageLiteral(resourceName: "like_vide"), for: .normal)
+        }
+        observerLikes()
+    }
+    
+    func observerLikes() {
+        
+        let ref = Refs.obtenir.basePost.child(self.post.id)
+        ref.observe(.childAdded) { (snap) in
+            //Ajouté
+            if let array = snap.value as? NSArray, let arrayString = array as? [String] {
+                self.post.maj(likes: arrayString)
+                self.miseEnPlace(post: self.post)
+            }
+        }
+        ref.observe(.childRemoved) { (snap) in
+            //Enlevé
+            if let array = snap.value as? NSArray, let arrayString = array as? [String] {
+                var mesLikes = self.post.likes
+                for string in arrayString {
+                    if let index = mesLikes.index(of: string) {
+                        mesLikes.remove(at: index)
+                    }
+                }
+                self.post.maj(likes: mesLikes)
+                self.miseEnPlace(post: self.post)
+            }
+        }
+        ref.observe(.childChanged) { (snap) in
+            //Changé
+            if let array = snap.value as? NSArray, let arrayString = array as? [String] {
+                self.post.maj(likes: arrayString)
+                self.miseEnPlace(post: self.post)
+            }
+        }
     }
     
     @IBAction func likeAppuye(_ sender: Any) {
+        
+        guard let id = Auth.auth().currentUser?.uid else { return }
+        var array = self.post.likes
+        if !array.contains(id) {
+            array.append(id)
+        } else {
+            if let index = array.index(of: id) {
+                array.remove(at: index)
+            }
+        }
+        Refs.obtenir.basePost.child(self.post.id).updateChildValues([LIKES: array])
     }
 
 }

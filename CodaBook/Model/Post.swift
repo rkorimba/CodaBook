@@ -15,6 +15,7 @@ class Post {
     private var _utilisateur: Utilisateur
     private var _texte: String
     private var _imageUrl: String?
+    private var _likes: [String]
     
     var id: String {
         return _id
@@ -22,6 +23,10 @@ class Post {
     
     var date: Double {
         return _date
+    }
+    
+    var likes: [String] {
+        return _likes
     }
     
     var utilisateur: Utilisateur {
@@ -42,6 +47,12 @@ class Post {
         self._texte = texte
         self._imageUrl = imageUrl
         self._utilisateur = utilisateur
+        self._likes = []
+    }
+    
+    func maj(likes: [String]) {
+        
+        self._likes = likes
     }
     
 }
