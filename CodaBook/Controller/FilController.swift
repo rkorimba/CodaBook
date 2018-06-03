@@ -42,6 +42,24 @@ class FilController: UIViewController, UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID) as? PostCell {
+            let post = posts[indexPath.row]
+            var hauteur: CGFloat = 150
+            if post.imageUrl != nil {
+                hauteur += cell.imageDuPost.frame.width
+            }
+            let taille = CGSize(width: cell.texteDuPost.frame.width, height: .greatestFiniteMagnitude)
+            let option = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+            let nsString = NSString(string: post.texte)
+            let hauteurDuTexte = nsString.boundingRect(with: taille, options: option, attributes: [.font: UIFont.systemFont(ofSize: 17)], context: nil).height
+            hauteur += hauteurDuTexte
+            return hauteur
+        }
+        return 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }

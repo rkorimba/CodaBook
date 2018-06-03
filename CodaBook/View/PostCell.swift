@@ -27,7 +27,11 @@ class PostCell: UITableViewCell {
         nomEtPrenom.text = self.post.utilisateur.prenom + "  " + self.post.utilisateur.nom
         imageDuPost.telecharger(self.post.imageUrl)
         texteDuPost.text = self.post.texte
-        
+        if self.post.imageUrl == nil {
+            imageDuPost.isHidden = true
+        } else {
+            imageDuPost.isHidden = false
+        }
     }
     
     @IBAction func likeAppuye(_ sender: Any) {
